@@ -9,8 +9,6 @@ import DisplayQuestion from "./Pages/Questions/DisplayQuestion";
 import Tags from "./Pages/Tags/Tags";
 import Users from "./Pages/Users/Users";
 import UserProfile from "./Pages/UserProfile/UserProfile";
-import ForgetPassword from "./Pages/Auth/ForgetPassword";
-import ResetPassword from "./Pages/Auth/ResetPassword";
 
 const AllRoutes = ({ slideIn, handleSlideIn }) => {
   return (
@@ -20,8 +18,6 @@ const AllRoutes = ({ slideIn, handleSlideIn }) => {
         element={<Home slideIn={slideIn} handleSlideIn={handleSlideIn} />}
       />
       <Route path="/Auth" element={<Auth />} />
-      <Route path="/forgotPassword" element={<ForgetPassword/>} />
-      <Route path="/resetPassword/:token" element={<ResetPassword/>} />
       <Route path="/AskQuestion" element={<AskQuestion />} />
       <Route
         path="/Questions"
