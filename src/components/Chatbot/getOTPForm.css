@@ -1,0 +1,36 @@
+.form-container{
+    padding: 16px;
+    box-shadow: 2px 2px 5px rgb(175, 175, 175);
+    width: fit-content;
+    border-radius: 8px;
+    background-color: white;
+}
+.close-icon{
+    font-size: x-large;
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.input-container>label{
+    font-size: small;
+}
+.error-container{
+    color: red;
+    font-size: x-small;
+    height: 10px;
+}
+.submit-button{
+    background-color: rgb(73, 73, 237);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 4px 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: medium;
+}
