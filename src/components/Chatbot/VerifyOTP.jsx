@@ -7,7 +7,7 @@ import {string,object} from 'yup'
 const VerifyOTPForm = ({email,onOtpVerified}) => {
     const [isLoading, setIsLoading] = useState(false)
     const validationSchema = object({
-        otp: string().length(6,'otp should be only 6 digit.').required('email is required.')
+        otp: string().length(6,'otp should be only 6 digit.').required('OTP is required.')
     })
     const handleSubmit = async(values) => {
         setIsLoading(true)
