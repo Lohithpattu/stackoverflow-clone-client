@@ -4,6 +4,9 @@ import React, { useState } from 'react'
 import loadingIcon from '../../assets/loading-icon.svg'
 import { baseUrl } from '../../api'
 import {string,object} from 'yup'
+
+import './verifyOTP.css'
+
 const VerifyOTPForm = ({email,onOtpVerified}) => {
     const [isLoading, setIsLoading] = useState(false)
     const validationSchema = object({
@@ -16,8 +19,8 @@ const VerifyOTPForm = ({email,onOtpVerified}) => {
             onOtpVerified()
         })
         .catch((error)=>{
-            console.log(error)
-            alert(error.message)
+            console.log(error.response.data)
+            alert(error.response.data.message)
         })
         .finally(()=>setIsLoading(false))
     }

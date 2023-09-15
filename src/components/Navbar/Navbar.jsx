@@ -18,8 +18,10 @@ const Navbar = ({ handleSlideIn }) => {
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
+    dispatch({type:"UNVERIFIED" });
     navigate("/");
     dispatch(setCurrentUser(null));
+    window.location.reload();
   };
 
   useEffect(() => {
