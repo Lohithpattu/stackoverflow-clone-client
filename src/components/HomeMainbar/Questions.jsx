@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import moment from "moment";
 
 const Questions = ({ question }) => {
+  const navigate=useNavigate()
   return (
     <div className="display-question-container">
       <div className="display-votes-ans">
@@ -29,7 +30,7 @@ const Questions = ({ question }) => {
             ))}
           </div>
           <p className="display-time">
-            asked {moment(question.askedOn).fromNow()} {question.userPosted}
+            asked {moment(question.askedOn).fromNow()} <span onClick={()=>{navigate(`/users/${question.userId}`)}} style={{color:"#009dff",cursor:"pointer"}}>{question.userPosted}</span>
           </p>
         </div>
       </div>
